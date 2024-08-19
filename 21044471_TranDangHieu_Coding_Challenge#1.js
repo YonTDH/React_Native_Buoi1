@@ -117,3 +117,15 @@ function MatchResult(dolphinsScore, koalasScore) {
 }
 
 MatchResult(dolphinsScore, koalasScore);
+
+//data Bonus 1
+dolphinsScore = [97, 112, 101];
+koalasScore = [109, 95, 123];
+
+MatchResult(dolphinsScore, koalasScore);
+
+//data Bonus 2
+dolphinsScore = [97, 112, 101];
+koalasScore = [109, 95, 106];
+
+MatchResult(dolphinsScore, koalasScore);
