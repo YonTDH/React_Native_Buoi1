@@ -210,3 +210,49 @@ console.log("Tips:", tips4);
 console.log("Totals:", totals);
 console.log("Average:", calcAverage4(totals));
 
+
+console.log("\n\n----- Array Methods-----");
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Array: ",numbers);
+
+console.log("Coding Array #1: Filter(lọc số chẵn trong mảng)"); 
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+console.log(evenNumbers);
+
+// Hàm myFilter tự định nghĩa
+function myFilter(array, callback) {
+    const result = [];
+    for (let i = 0; i < array.length; i++) {
+        if (callback(array[i], i, array)) {
+            result.push(array[i]);
+        }
+    }
+    return result;
+}
+let myNumbers = myFilter(numbers, num => num % 2 === 0);
+
+
+console.log("Coding Array #2: Find(số chẵn đầu tiên trong mảng)");
+const firstEven = numbers.find(num => num % 2 === 0);
+console.log(firstEven);
+
+console.log("Coding Array #3: Some(kiểm tra trong mảng có phần tử thỏa mản điều kiện số chẵn không)");
+const hasEven = numbers.some(num => num % 2 === 0);
+console.log(hasEven); // Output: true
+
+// mảng số lẻ
+// let oddNumbers = [1, 3, 5, 7, 9];
+// console.log("mảng số lẻ ", oddNumbers);
+// let checkOdd = oddNumbers.some(num => num % 2 === 0);
+// console.log(checkOdd);
+
+console.log("Coding Array #4: Every(kiểm tra tất cả phần tử trong mảng có thỏa mãn đk số chẵn không)");
+let allEven = numbers.every(num => num % 2 === 0);
+console.log(allEven);
+
+console.log("Coding Array #5: map(tạo mảng mới từ mảng cũ*2)");
+const doubled = numbers.map(num => num * 2);
+console.log(doubled);
+
+console.log("Coding Array #6: forEach(duyệt qua từng phần tử trong mảng*3)");
+numbers.forEach(num => console.log(num * 3)); 
