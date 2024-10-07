@@ -229,7 +229,10 @@ function myFilter(array, callback) {
     }
     return result;
 }
-let myNumbers = myFilter(numbers, num => num % 2 === 0);
+console.log("Coding Array #1: Filter(lọc số chẵn trong mảng)");
+evenNumberss = myFilter(numbers, num => num % 2 === 0);
+console.log(evenNumberss); // Output: [2, 4, 6, 8, 10]
+
 
 
 console.log("Coding Array #2: Find(số chẵn đầu tiên trong mảng)");
